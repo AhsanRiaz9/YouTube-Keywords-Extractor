@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="icon" href="../static/images/logo_200x200 (1).png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+
+        }
+
+        .navbar,
+        footer {
+            background-color: light;
+            background-color: #2A2359;
+            color: white !important;
+        }
+
+        a.nav-link,
+        a.navbar-brand {
+            color: white;
+            font-size: 20px;
+        }
+
+        a.navbar-brand {
+            margin-right: 15%;
+            font-size: 28px;
+            text-align: center;
+            padding: 10px auto;
+            text-align: center;
+            margin-left: 30px;
+        }
+
+        a.navbar-brand:hover {
+            color: #04C4D9;
+        }
+
+        a.nav-link {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            margin-left: 30px;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.nav-link:hover {
+            background-color: #F26716;
+            color: white;
+        }
+
+        #mainContent {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 990px) {
+
+            a.navbar-brand#logo {
+                margin: 0 auto;
+                font-size: 25px;
+
+            }
+
+            a.nav-link {
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            footer>h5 {
+                font-size: 15px;
+
+            }
+        }
+
+        .searchBtn {
+            float: right;
+        }
+
+        .copy-status {
+            float: right;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="#"><span><img src="../static/images/logo_200x200 (1).png"
+                        height="50px"></span> Youtube Keywords Extractor </a>
+
+            <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">How to Use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <div id="mainContent">
+            <div class="row">
+                <section>
+                    <h2>Youtube Keywords Extractor</h2>
+                    <p>YouTube Keywords Extractor is a flask web application designed in Python Flask Web Frame. It will
+                        extract keywords of any YouTube video.</p>
+                </section>
+            </div>
+            <div class="row">
+                <section>
+                    <h3>Extract the tags from a Youtube Videos.</h3>
+                    <ul>
+                        <li>This tool can extract tags from a Youtube video.</li>
+                        <li>Just enter the URL and ur tool does the rest.</li>
+                        <li>Find and analyze the tags used by some Youtubeur will improve the ones you use. </li>
+                        <li>You must optimize your tags to improve the position for your video in search results (SEO)
+                            both
+                            of Youtube, but also on Google and other search engines.</li>
+                    </ul>
+                    </p>
+                </section>
+            </div>
+            <div class="row">
+                <section>
+                    <h4>Enter <span><i class="bi bi-play-btn-fill fs-3 text-danger"></i></span> YouTube Video URL here
+                    </h4>
+                    <input class="form-control" type="text" placeholder="Enter Youtube Video Link" id="video-url">
+                    <p class="my-2">e.g: <i class="text-danger">https://youtu.be/BJnSyAAvDII</i> <span
+                            class="searchBtn"><button id="searchTags" class="btn btn-success"><i
+                                    class="bi bi-search"></i> Search
+                                Keywords</button></span></p>
+                </section>
+            </div>
+            <div class="row my-3">
+                <section>
+                    <h4 class="text-center fw-bold text-">Keywords</h4>
+                    <div class="text-center" id="keywordsBtn">
+                        <button class="btn btn-danger mx-2">Dummy</button>
+                        <button class="btn btn-danger mx-2">YouTube</button>
+                        <button class="btn btn-danger mx-2">Video</button>
+                        <button class="btn btn-danger mx-2">Keywords</button>
+                        <button class="btn btn-danger mx-2">Tags</button>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="row">
+                <section>
+                    <h4>Keywords in TextArea <span class="copy-status fs-5 text-success"><i
+                                class="bi bi-clipboard-check"></i> Copied to Clipboard</span></h4>
+                    <textarea class="form-control w-100" id="video-keywords">
+
+                    </textarea>
+                    <button id="copy-tags" class="btn btn-success my-2 text-center"><i class="bi bi-clipboard"></i> Copy
+                        Tags</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-light footer mt-auto py-3">
+        <h5 class="text-center">© CopyRight 2021 Youtube Keywords Extractor. All Right Reserved</h5>
+    </footer>
+    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        function isValidYoutubeURL(url) {
+            let patterns = ['https://youtu.be/', 'youtu.be/', 'https://www.youtube.com/watch?v=', 'youtube.com/watch?v='];
+            for (let i = 0; i < patterns.length; i++) {
+                if (url.indexOf(patterns[i]) == 0) {
+                    // alert("Correct URL");
+                    return true;
+                }
+            }
+            // alert("Invalid URL");
+            return false;
+        }
+        $(document).ready(function () {
+            $('#copy-tags').click(function () {
+                const area = $('#video-keywords');
+                area.select();
+                document.execCommand('copy');
+                $('.copy-status').css('display', 'block');
+            });
+            $('#searchTags').click(function () {
+
+                let url = $('#video-url').val();
+                let flag = isValidYoutubeURL(url);
+                if(flag==false){
+                    alert("Invalid YouTube URL");
+                    return;
+                }
+                // Using AJAX to get tags
+                $.ajax({
+                    type: 'POST',
+                    url: '/getYoutubeVideoTags',
+                    data: JSON.stringify({'url':url}),
+                    dataType: 'json',
+                    async: true,
+                    beforeSend: function (xhr) {
+                        if (xhr && xhr.overrideMimeType) {
+                            xhr.overrideMimeType('application/json;charset=utf-8');
+                        }
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        //Do stuff with the JSON data
+                        if(data['tagList'].length==0){
+                            alert("No Result Found");
+                            return;
+                        }
+                        console.log(data['tagList']);
+                        keyWords = ''
+                        tagList = data['tagList']
+                        tags = ''
+                        for(let i=0;i<tagList.length;i++)
+                        {
+                            keyWords = keyWords + ` <button class="btn btn-danger mx-2 mb-2">${tagList[i]}</button> `;
+                            tags = tags + tagList[i]
+                            if(i!=tagList.length-1)
+                            {
+                                tags = tags + ','
+                            }
+                        }
+                        console.log(keyWords)
+                        document.getElementById('keywordsBtn').innerHTML = keyWords;
+                        alert(tags);
+                        document.getElementById('keywordsBtn').innerHTML
+                        $('#video-keywords').val(tags);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
