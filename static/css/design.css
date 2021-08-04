@@ -17,6 +17,13 @@ footer {
   color: white !important;
 }
 
+#pageHeading
+{
+	background-color: white;
+    color: #2a2359 !important;
+    font-weight: bold;
+}
+
 a.nav-link,
 a.navbar-brand {
   color: white;

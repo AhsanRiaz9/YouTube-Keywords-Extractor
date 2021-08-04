@@ -15,5 +15,20 @@ def getYoutubeTags():
     obj = {'tagList': tagsList}
     return jsonify(obj)
 
+
+@app.route('/howToUse')
+def howToUsePage():
+    return render_template('How to Use.html')
+
+
+@app.route('/About')
+def aboutPage():
+    return render_template('About.html')
+
+@app.route('/Contact')
+def contactUsPage():
+    return render_template('Contact.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

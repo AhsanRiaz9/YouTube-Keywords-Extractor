@@ -6,7 +6,7 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>About</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="icon" href="../static/images/logo_200x200 (1).png" type="image/icon type">
@@ -49,9 +49,14 @@
         <div id="mainContent">
             <div class="row">
                 <section>
-                    <h2>Youtube Keywords Extractor</h2>
-                    <p>YouTube Keywords Extractor is a flask web application designed in Python Flask Web Frame. It will
-                        extract keywords of any YouTube video.</p>
+                    <h1 id="pageHeading" class="text-center py-3 my-2 text-light">About</h1>
+                </section>
+            </div>
+            <div class="row">
+                <section>
+                    <h3>What is YKE?</h3>
+                        <p>YKE - YouTube Keywords Extractor is a flask web application designed in Python Flask Web
+                            Frame. It will extract keywords from any YouTube video.</p>
                 </section>
             </div>
             <div class="row">
@@ -65,43 +70,36 @@
                             both
                             of Youtube, but also on Google and other search engines.</li>
                     </ul>
-                    </p>
                 </section>
             </div>
             <div class="row">
                 <section>
-                    <h4>Enter <span><i class="bi bi-play-btn-fill fs-3 text-danger"></i></span> YouTube Video URL here
-                    </h4>
-                    <input class="form-control" type="text" placeholder="Enter Youtube Video Link" id="video-url">
-                    <p class="my-2">e.g: <i class="text-danger">https://youtu.be/BJnSyAAvDII</i> <span
-                            class="searchBtn"><button id="searchTags" class="btn btn-success"><i
-                                    class="bi bi-search"></i> Search
-                                Keywords</button></span></p>
-                </section>
-            </div>
-            <div class="row my-3">
-                <section>
-                    <h4 class="text-center fw-bold text-">Keywords</h4>
-                    <div class="text-center" id="keywordsBtn">
-                        <button class="btn btn-danger mx-2 my-2">Dummy</button>
-                        <button class="btn btn-danger mx-2 my-2">YouTube</button>
-                        <button class="btn btn-danger mx-2 my-2">Video</button>
-                        <button class="btn btn-danger mx-2 my-2">Keywords</button>
-                        <button class="btn btn-danger mx-2 my-2">Tags</button>
+                    <h3>Technologies</h3>
+                    <div>
+                        <h4>Front-end: </h4>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                            <li>jQuery</li>
+                            <li>Bootstrap</li>
+                        </ul>
                     </div>
 
-                </section>
-            </div>
+                    <div>
+                        <h4>Back-end: </h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>Python Flask Web Framework</li>
+                        </ul>
+                    </div>
 
-            <div class="row">
-                <section>
-                    <h4>Keywords in TextArea <span class="copy-status fs-5 text-success"><i
-                                class="bi bi-clipboard-check"></i> Copied to Clipboard</span></h4>
-                    <textarea class="form-control w-100" id="video-keywords">
-
-                    </textarea>
-                    <button id="copy-tags" class="btn btn-success my-2 text-center"><i class="bi bi-clipboard"></i> Copy
-                        Tags</button>
+                    <div>
+                        <h4>Web Scrapper: </h4>
+                        <ul>
+                            <li>Python Web Scrapper</li>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </div>
