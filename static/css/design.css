@@ -68,7 +68,7 @@ a.nav-link:hover {
 @media (max-width: 990px) {
   a.navbar-brand#logo {
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   a.nav-link {
