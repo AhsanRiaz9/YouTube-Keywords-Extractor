@@ -90,25 +90,32 @@
                 <div class="col-lg-6 col-md-6 col-12 my-2">
                     <div class="border border-lg border-dark border-5 rounded py-5 px-5 h-100">
                         <p>If you have query, you can contact with me by filling this form.</p>
+                        {% if message %}
+                            <div class="alert alert-success my-2" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+                        <form action="/sendMessage"  method="post">
                         <section class="form-group my-2">
                             <label>Your Name</label>
-                            <input class="form-control" type="text" name="name" placeholder="Enter your name"/>
+                            <input class="form-control" type="text" name="name" required placeholder="Enter your name"/>
                         </section>
                         <section class="form-group my-2">
-                            <label>Your Phone</label>
-                            <input class="form-control" type="text" name="name" placeholder="Enter your phone number"/>
+                            <label>Your Email</label>
+                            <input class="form-control" type="email" name="email" required placeholder="Enter your email"/>
                         </section>
                         <section class="form-group my-2">
                             <label>Enter Title</label>
-                            <input class="form-control" type="text" name="title" placeholder="Enter title"/>
+                            <input class="form-control" type="text" name="title" required placeholder="Enter title"/>
                         </section>
                         <section class="form-group my-2">
                             <label>Your Message</label>
-                            <textarea class="form-control" name="message">
+                            <textarea class="form-control" required name="message">
 
                             </textarea>
                         </section>
                         <button type="submit" class="btn btn-danger btn-lg form-control"><i class="bi bi-cursor-fill"></i> Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>

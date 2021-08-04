@@ -27,7 +27,15 @@ def aboutPage():
 
 @app.route('/Contact')
 def contactUsPage():
-    return render_template('Contact.html')
+    return render_template('Contact.html',sendMessage=None)
+
+@app.route('/sendMessage',methods=['GET','POST'])
+def sendMessage():
+    name = request.form['name']
+    email = request.form['email']
+    title = request.form['title']
+    message = request.form['message']
+    return render_template('Contact.html',message='Your message Sent Successfully! We will reach you within 24 hours.')
 
 
 if __name__ == '__main__':
