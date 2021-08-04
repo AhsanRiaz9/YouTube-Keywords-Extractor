@@ -47,7 +47,7 @@ $(document).ready(function () {
           alert("No Result Found");
           return;
         }
-        // {#console.log(data['tagList']);#}
+        // console.log(data['tagList']);
         keyWords = "";
         tagList = data["tagList"];
         tags = "";
