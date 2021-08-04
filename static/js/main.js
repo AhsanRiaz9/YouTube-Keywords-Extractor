@@ -54,7 +54,7 @@ $(document).ready(function () {
         for (let i = 0; i < tagList.length; i++) {
           keyWords =
             keyWords +
-            ` <button class="btn btn-danger mx-2 mb-2">${tagList[i]}</button> `;
+            ` <button class="btn btn-danger mx-2 my-2">${tagList[i]}</button> `;
           tags = tags + tagList[i];
           if (i != tagList.length - 1) {
             tags = tags + ",";
