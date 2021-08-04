@@ -3,6 +3,8 @@ from Scrapping import getKeywords
 app = Flask(__name__)
 @app.route('/')
 def index():
+
+    return render_template('f.html',data=getKeywords('www.com'))
     return render_template("index.html")
 
 @app.route('/getYoutubeVideoTags',methods=['POST'])

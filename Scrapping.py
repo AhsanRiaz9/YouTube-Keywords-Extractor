@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 
 def getKeywords(url):
     list = []
-    # list = ['tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha','tu mera putar chutti kar','Wah kia bat he','chutii kar lo','first tag','hack','tech','wow','new video','haha']
+    url = 'https://www.fiverr.com/search/gigs?query=cpp'
     r = requests.get(url)
-    print(r.content)
+    # print(r.content)
     soup = BeautifulSoup(r.content, 'html.parser')
     list = []
-    print(soup.contents)
+    # print(soup.contents)
+    return str(soup.contents)
     data = (soup.find_all('meta'))
     for i in data:
         s = str(i)
