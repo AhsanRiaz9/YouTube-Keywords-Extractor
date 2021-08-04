@@ -257,7 +257,7 @@
                             alert("No Result Found");
                             return;
                         }
-                        console.log(data['tagList']);
+                        {#console.log(data['tagList']);#}
                         keyWords = ''
                         tagList = data['tagList']
                         tags = ''
@@ -270,9 +270,9 @@
                                 tags = tags + ','
                             }
                         }
-                        console.log(keyWords)
+                        {#console.log(keyWords)#}
                         document.getElementById('keywordsBtn').innerHTML = keyWords;
-                        alert(tags);
+                        {#alert(tags);#}
                         document.getElementById('keywordsBtn').innerHTML
                         $('#video-keywords').val(tags);
                     }
