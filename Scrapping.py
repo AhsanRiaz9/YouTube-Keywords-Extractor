@@ -7,7 +7,6 @@ def getKeywords(url):
     # print(r.content)
     soup = BeautifulSoup(r.content, 'html.parser')
     # print(soup.contents)
-    return str(soup.contents)
     data = (soup.find_all('meta'))
     for i in data:
         s = str(i)
