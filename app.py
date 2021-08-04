@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify,request, make_response
+from flask import Flask, render_template, jsonify,request, make_response,redirect
 from Scrapping import getKeywords
 from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
@@ -36,7 +36,6 @@ def sendMessage():
     title = request.form['title']
     message = request.form['message']
     return render_template('Contact.html',message='Your message Sent Successfully! We will reach you within 24 hours.')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
