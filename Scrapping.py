@@ -3,11 +3,9 @@ from bs4 import BeautifulSoup
 
 def getKeywords(url):
     list = []
-    url = 'https://www.fiverr.com/search/gigs?query=cpp'
     r = requests.get(url)
     # print(r.content)
     soup = BeautifulSoup(r.content, 'html.parser')
-    list = []
     # print(soup.contents)
     return str(soup.contents)
     data = (soup.find_all('meta'))
