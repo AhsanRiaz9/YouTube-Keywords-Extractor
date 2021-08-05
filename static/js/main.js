@@ -54,7 +54,7 @@ $(document).ready(function () {
         for (let i = 0; i < tagList.length; i++) {
           keyWords =
             keyWords +
-            `<a target="_blank" href="https://www.youtube.com/results?search_query=${tagList[i]}>" <button class="btn btn-danger mx-2 my-2">${tagList[i]}</button> </a> `;
+            `<a target="_blank" href="https://www.youtube.com/results?search_query=${tagList[i]}"> <button class="btn btn-danger mx-2 my-2">${tagList[i]}</button> </a> `;
           tags = tags + tagList[i];
           if (i != tagList.length - 1) {
             tags = tags + ",";
