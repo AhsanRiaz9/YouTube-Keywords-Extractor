@@ -17,4 +17,4 @@ six==1.16.0
 soupsieve==2.2.1
 urllib3==1.26.6
 webencodings==0.5.1
-Werkzeug==2.2.3
+Werkzeug==3.0.3
